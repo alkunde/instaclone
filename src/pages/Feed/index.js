@@ -23,7 +23,7 @@ export default function Feed() {
     const totalItems = response.headers.get('X-Total-Count');
 
     setTotal(Math.floor(totalItems / 5));
-    setFeed(shouldReresh ? data : [...feed, ...data]);
+    setFeed(shouldRefresh ? data : [...feed, ...data]);
     setPage(pageNumber + 1);
     setLoading(false);
   }
